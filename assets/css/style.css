@@ -106,6 +106,22 @@ section {
   object-fit: cover;
 }
 
+/* MODALE DETTAGLIO LAVORO: alta al massimo l'80% dello schermo */
+#modale-lavoro .modal-content {
+  max-height: 80vh;
+}
+
+/* Se il testo non ci sta, scorre solo il corpo della modale (il titolo resta fermo) */
+#modale-lavoro .modal-body {
+  overflow-y: auto;
+}
+
+/* La foto occupa al massimo metà schermo, ritagliata senza deformarla */
+#immagine-dettaglio {
+  max-height: 50vh;
+  object-fit: cover;
+}
+
 /* BOTTONE */
 .btn-brand {
   background-color: var(--btn-bg);

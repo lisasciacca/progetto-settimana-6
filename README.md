@@ -18,6 +18,7 @@ Questa repository contiene il codice sorgente di una landing page sviluppata per
 - [Albero del dom](#albero-del-dom)
 - [Validazione dei Campi del Form](#validazione-dei-campi-del-form)
 - [Come funziona](#come-funzionamente)
+- [Aspetto grafico](#aspetto-grafico)
 - [Convenzioni di codice](#convenzioni-di-codice)
 - [Aggiornamenti](#aggiornamenti)
 - [Realizzato da](#realizzato-da)
@@ -151,11 +152,32 @@ Il file `assets/js/script.js` organizza l'interattività dell'intera pagina seco
 
 ---
 
+## Aspetto Grafico
+
+L'applicazione si presenta con un design pulito, sofisticato e professionale, progettato per rispecchiare l'identità visiva di uno studio di architettura. Il layout adotta un approccio Mobile-First e responsive, adattandosi fluidamente alle diverse risoluzioni (Mobile, Tablet e Desktop). La palette cromatica si sviluppa su toni caldi e raffinati, imperniati su un colore primario elegante (tonalità marrone basata su HSL 20, 30%, 35%) utilizzato per la barra di navigazione, i pulsanti d'azione, le intestazioni e gli stati interattivi. La struttura visiva alterna blocchi scuri e sezioni luminose, offrendo anche un supporto nativo per l'alternanza dinamica tra tema chiaro e tema scuro. Vengono impiegati font lineari e altamente leggibili, con gerarchie tipografiche ben definite per garantire una navigazione fluida ed elegante.
+
+---
+
+## Extra e dettagli
+
+- **Switch Tema Chiaro / Scuro** Cliccando sul bottone in alto a destra cambia il tema. Gestito da una funzione nel js.
+- **Animazioni** Animazioni di evidenziazione e lift-up con l'hover delle card.
+- **Auto-Close Mobile** Chiusura automatica del menu hamburger su dispositivi mobili a ogni click sui link di navigazione. Gestito da una funzione nel js.
+- **Hamburger senza focus** Quando il menu prende il focus non ha più i bordi spessi. Rimosso perchè non perdeva il focus cliccando due volte. Gestito da css.
+- **Griglia Lavori Dinamica e Filtri**: Rendering dinamico delle schede progetto da array JS con filtraggio per categoria. I bottoni hanno un colore in linea con la palette del progetto. Gestito da js.
+- **Immagini placeholder** Immagini placehoder prese da Pexel.
+- **Modale Dettaglio Lavoro**: Apertura di una finestra modale Bootstrap popolata dinamicamente con i dettagli del progetto (immagine, categoria, anno, descrizione) al click su una card. Gestito da js.
+- **Modulo di Contatto in Modale e Validazione**: Form di contatto nativo inserito in overlay con validazione HTML5, feedback visuale in stile Bootstrap ed eventi asincroni per la gestione della conferma d'invio.
+- **Contatti footer** La mail e il numero di telefono nel footer reindirizzano a una pagina di chiamata e di web mail.
+
+---
+
 ## Convenzioni di codice
 
 - **camelCase** per variabili riassegnabili, classi e funzioni.
 - **UPPER_CASE** per le costanti e i riferimenti agli elementi DOM del progetto.
 - **Commenti esplicativi** presenti in HTML, CSS e JS per agevolare la lettura del codice.
+
 
 ---
 
@@ -165,14 +187,12 @@ Il file `assets/js/script.js` organizza l'interattività dell'intera pagina seco
 | :--- | :--- |
 | **ver. 0.0** | Commit iniziale e impostazione del progetto |
 | **ver. 1.0** | Avvio e struttura HTML semantica iniziale e stile CSS di base |
-| **ver. 1.1** | Aggiornamento dei file HTML e CSS |
+| └─ **ver. 1.1** | Aggiornamento dei file HTML e CSS |
 | **ver. 2.0** | Aggiunta della sezione lavori (Works), compilazione JS e integrazione responsive design (Mobile, Tablet, Desktop) |
-| **ver. 2.1** | Correzioni minori (*minor fix*) |
+| └─ **ver. 2.1** | Correzioni minori |
 | **ver. 3.0** | Completamento versione 3.0, introduzione di Bootstrap 5 per navbar e modali |
-| **ver. 3.1** | Integrazione dinamica della griglia lavori da JS e filtraggio categorie |
-
-
-immagini placehoder prese da picsum.photos
+| └─ **ver. 3.1** | Integrazione dinamica della griglia lavori da JS e filtraggio categorie |
+| └─ **ver. 3.2** | Correzioni minori |
 
 ---
 
