@@ -10,9 +10,9 @@
   --footer-link-hover: hsl(40, 30%, 90%); /* LINK FOOTER HOVER */
 }
 
-/* Testo della pagina nero */
-body {
-  color: #000;
+/* Testo nero nel tema chiaro (nel tema scuro decide Bootstrap) */
+:root[data-bs-theme="light"] {
+  --bs-body-color: #000;
 }
 
 /* Il link della navbar porta le sezioni sotto la navbar sticky */
@@ -25,20 +25,47 @@ section {
   background-color: var(--bg-nav);
 }
 
+.btn-tema {
+  border: 0;
+}
+
 /* HERO */
 .hero {
   background-color: var(--bg-hero);
   min-height: 80vh;
 }
 
-/* CARD SERVIZI */
-#servizi .card {
-  box-shadow: var(--shadow-card);
-  transition: box-shadow 0.3s;
+.hero-cta {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-#servizi .card:hover {
+.hero-cta:hover {
+  color: var(--footer-link-hover);
+  text-decoration: underline;
+}
+
+/* CARD (servizi e lavori): ombra + hover lift */
+.card {
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
   box-shadow: var(--shadow-card-hover);
+  transform: translateY(-6px);
+}
+
+/* Riquadro al posto dell'immagine nelle card lavori */
+.immagine-lavoro {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-hero);
+  font-size: 3rem;
+  border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
 }
 
 /* BOTTONE */

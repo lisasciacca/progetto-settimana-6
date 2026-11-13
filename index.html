@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-bs-theme="light">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,10 +21,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-md-center">
               <li class="nav-item"><a class="nav-link" href="#studio">Studio</a></li>
               <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
               <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
+              <li class="nav-item">
+                <!-- Pulsante tema chiaro / scuro -->
+                <button id="btn-tema" class="btn btn-tema nav-link" type="button"
+                        aria-label="Cambia tema">
+                  <span id="icona-tema">🌙</span>
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -34,12 +41,12 @@
     <section id="studio" class="hero d-flex align-items-center text-center text-white">
       <!-- Hero: titolo grande, sottotitolo, CTA. Sfondo brand. min-height 80vh -->
       <div class="container">
-        <h1 class="fw-bold">Architettura per spazi che parlano</h1>
+        <h1 class="display-3 fw-bold">Architettura per spazi che parlano</h1>
         <p class="lead">
           Progettiamo case, uffici e spazi commerciali con attenzione alla luce,
           ai materiali e al contesto.
         </p>
-        <a href="#contatti" class="btn btn-link text-white text-decoration-none">Inizia un progetto</a>
+        <a href="#contatti" class="hero-cta">Inizia un progetto</a>
       </div>
     </section>
 
@@ -91,40 +98,143 @@
       </div>
     </section>
 
-    <section id="contatti" class="py-5 bg-body-tertiary">
-      <!-- Form contatti Bootstrap, larghezza limitata e centrata -->
+    <section id="lavori" class="py-5">
+      <!-- Sezione lavori: 6 card. Mobile 1 per riga, md 2 per riga, lg 3 per riga -->
       <div class="container">
         <div class="text-center mb-4">
-          <h2 class="fw-bold">Contattaci</h2>
-          <p class="text-body-secondary">Compila il form, ti rispondiamo entro 48 ore.</p>
+          <h2 class="fw-bold">Alcuni lavori</h2>
+          <p class="text-body-secondary">Una selezione dei progetti realizzati negli ultimi anni.</p>
         </div>
-        <div class="row justify-content-center">
-          <form id="form-contatti" class="col-12 col-md-8 col-lg-6">
-            <div class="mb-3">
-              <label for="nome" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="nome" name="nome" required>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0">
+              <div class="immagine-lavoro">🏡</div>
+              <div class="card-body">
+                <h3 class="card-title h5 fw-bold">Casa sul lago</h3>
+                <p class="card-text text-body-secondary small">Residenziale · Como, 2025</p>
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0">
+              <div class="immagine-lavoro">🏙️</div>
+              <div class="card-body">
+                <h3 class="card-title h5 fw-bold">Loft sui Navigli</h3>
+                <p class="card-text text-body-secondary small">Interior design · Milano, 2024</p>
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="tipo" class="form-label">Tipo di progetto</label>
-              <select class="form-select" id="tipo" name="tipo">
-                <option value="residenziale" selected>Residenziale</option>
-                <option value="interior">Interior design</option>
-                <option value="ristrutturazione">Ristrutturazione</option>
-              </select>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0">
+              <div class="immagine-lavoro">💼</div>
+              <div class="card-body">
+                <h3 class="card-title h5 fw-bold">Uffici Studio Verdi</h3>
+                <p class="card-text text-body-secondary small">Interior design · Milano, 2024</p>
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="messaggio" class="form-label">Messaggio</label>
-              <textarea class="form-control" id="messaggio" name="messaggio" rows="4" required></textarea>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0">
+              <div class="immagine-lavoro">🌳</div>
+              <div class="card-body">
+                <h3 class="card-title h5 fw-bold">Villa in collina</h3>
+                <p class="card-text text-body-secondary small">Residenziale · Bergamo, 2023</p>
+              </div>
             </div>
-            <button type="submit" class="btn btn-brand w-100">Invia</button>
-          </form>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0">
+              <div class="immagine-lavoro">☕</div>
+              <div class="card-body">
+                <h3 class="card-title h5 fw-bold">Caffè Brera</h3>
+                <p class="card-text text-body-secondary small">Ristrutturazione · Milano, 2023</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0">
+              <div class="immagine-lavoro">📚</div>
+              <div class="card-body">
+                <h3 class="card-title h5 fw-bold">Libreria di quartiere</h3>
+                <p class="card-text text-body-secondary small">Ristrutturazione · Monza, 2022</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <section id="contatti" class="py-5 bg-body-tertiary">
+      <!-- Contatti: il form si apre in una modale cliccando "Contattaci" -->
+      <div class="container text-center">
+        <h2 class="fw-bold">Contattaci</h2>
+        <p class="text-body-secondary">Compila il form, ti rispondiamo entro 48 ore.</p>
+        <button type="button" class="btn btn-brand px-4" data-bs-toggle="modal"
+                data-bs-target="#modale-form">
+          Contattaci
+        </button>
+      </div>
+    </section>
+
+    <!-- Modale con il form contatti -->
+    <div class="modal fade" id="modale-form" tabindex="-1"
+         aria-labelledby="titolo-modale-form" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="titolo-modale-form">Contattaci</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body">
+            <form id="form-contatti" novalidate>
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+                <div class="invalid-feedback">Inserisci il tuo nome.</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="invalid-feedback">Inserisci un'email valida.</div>
+              </div>
+              <div class="mb-3">
+                <label for="tipo" class="form-label">Tipo di progetto</label>
+                <select class="form-select" id="tipo" name="tipo">
+                  <option value="residenziale" selected>Residenziale</option>
+                  <option value="interior">Interior design</option>
+                  <option value="ristrutturazione">Ristrutturazione</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="messaggio" class="form-label">Messaggio</label>
+                <textarea class="form-control" id="messaggio" name="messaggio" rows="4" required></textarea>
+                <div class="invalid-feedback">Scrivi un messaggio.</div>
+              </div>
+              <button type="submit" class="btn btn-brand w-100">Invia</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modale di conferma invio form -->
+    <div class="modal fade" id="modale-conferma" tabindex="-1"
+         aria-labelledby="titolo-modale" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="titolo-modale">Messaggio inviato</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body">
+            Grazie <strong id="nome-modale"></strong>, ti risponderemo entro 48 ore.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-brand" data-bs-dismiss="modal">Chiudi</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="text-white pt-5 pb-3">
       <!-- 3 colonne: Atelier+indirizzo / Link / Contatti. Copyright in fondo -->
