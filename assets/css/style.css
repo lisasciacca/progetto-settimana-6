@@ -35,15 +35,20 @@ section {
   min-height: 80vh;
 }
 
+/*call to action*/
 .hero-cta {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.25rem;
   color: #fff;
   text-decoration: none;
-  transition: color 0.3s;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
 }
 
 .hero-cta:hover {
-  color: var(--footer-link-hover);
-  text-decoration: underline;
+  color: #fff;
+  background-color: var(--btn-bg-hover);
 }
 
 /* CARD (servizi e lavori): ombra + hover lift */
@@ -55,6 +60,11 @@ section {
 .card:hover {
   box-shadow: var(--shadow-card-hover);
   transform: translateY(-6px);
+}
+
+/*Non ho dato una classe all'icone per snellire, ma potrebbe essere necessario per modifiche future*/
+.fs-1 {
+    font-size: 3rem !important;
 }
 
 /* Riquadro al posto dell'immagine nelle card lavori */
