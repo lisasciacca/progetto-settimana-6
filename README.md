@@ -1,7 +1,8 @@
 # progetto-settimana-6
 
 ## Descrizione progetto
-Atelier
+Atelier - Un sito web aziendale è il biglietto da visita digitale di un'azienda o uno studio. Quattro informazioni: chi sei,
+cosa offri, alcuni lavori, come ti contattano.
 
 
 ## Base
@@ -27,6 +28,7 @@ modale form non in chiaro
 3 breakpoint (card verticali, 2+2, 3+3)
 liberi
 tema chiaro e tema scuro
+js
 
 #### --- JavaScript Naming Conventions ---
 let / classes -> camelCase (es. let userName = "Mario";)

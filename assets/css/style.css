@@ -1,0 +1,75 @@
+/* Colori presi da colori.txt */
+:root {
+  --btn-bg: hsl(20, 30%, 35%);          /* BUTTON: sfondo e bordo */
+  --btn-bg-hover: hsl(20, 30%, 27%);    /* BUTTON HOVER: sfondo e bordo */
+  --bg-nav: hsl(20, 20%, 15%);          /* SFONDO NAV */
+  --bg-hero: hsl(20, 30%, 35%);         /* SFONDO HERO e SFONDO PRINCIPALE */
+  --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.08);         /* BOX SHADOW CARD */
+  --shadow-card-hover: 0 10px 24px rgba(0, 0, 0, 0.12); /* BOX SHADOW CARD HOVER */
+  --bg-footer: hsl(20, 20%, 15%);       /* SFONDO FOOTER */
+  --footer-link-hover: hsl(40, 30%, 90%); /* LINK FOOTER HOVER */
+}
+
+/* Testo della pagina nero */
+body {
+  color: #000;
+}
+
+/* Il link della navbar porta le sezioni sotto la navbar sticky */
+section {
+  scroll-margin-top: 56px;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: var(--bg-nav);
+}
+
+/* HERO */
+.hero {
+  background-color: var(--bg-hero);
+  min-height: 80vh;
+}
+
+/* CARD SERVIZI */
+#servizi .card {
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.3s;
+}
+
+#servizi .card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* FORM: larghezza limitata e centrata */
+.form-contatti {
+  max-width: 480px;
+}
+
+/* BOTTONE */
+.btn-brand {
+  background-color: var(--btn-bg);
+  border-color: var(--btn-bg);
+  color: #fff;
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: var(--btn-bg-hover);
+  border-color: var(--btn-bg-hover);
+  color: #fff;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--bg-footer);
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--footer-link-hover);
+}
