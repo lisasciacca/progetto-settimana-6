@@ -64,6 +64,7 @@ L'applicazione offre un'interfaccia elegante e professionale, strutturata per ga
 
 ---
 
+immagini placehoder prese da picsum.photos
 
 ## Base
 Boostrap - bootstrap icon

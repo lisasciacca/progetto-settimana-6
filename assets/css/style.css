@@ -15,6 +15,11 @@
   --bs-body-color: #000;
 }
 
+:root[data-bs-theme="dark"] {
+  --shadow-card: 0 2px 6px hsla(40, 63%, 82%, 0.1);
+  --shadow-card-hover: 0 10px 24px hsla(40, 63%, 82%, 0.20);
+}
+
 /* Il link della navbar porta le sezioni sotto la navbar sticky */
 section {
   scroll-margin-top: 56px;
@@ -27,6 +32,11 @@ section {
 
 .btn-tema {
   border: 0;
+}
+
+/* Hamburger: niente bordo spesso dopo il click col mouse, resta solo per chi naviga con la tastiera (Tab) */
+.navbar-toggler:focus:not(:focus-visible) {
+  box-shadow: none;
 }
 
 /* HERO */
@@ -62,20 +72,38 @@ section {
   transform: translateY(-6px);
 }
 
+/* Card lavori cliccabili: cursore a manina */
+.card-lavoro {
+  cursor: pointer;
+}
+
 /*Non ho dato una classe all'icone per snellire, ma potrebbe essere necessario per modifiche future*/
 .fs-1 {
     font-size: 3rem !important;
 }
 
-/* Riquadro al posto dell'immagine nelle card lavori */
+/* BOTTONI FILTRO LAVORI: contorno marrone, pieni al passaggio del mouse e quando attivi */
+.btn-filtro {
+  --bs-btn-color: var(--btn-bg);
+  --bs-btn-border-color: var(--btn-bg);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--btn-bg);
+  --bs-btn-hover-border-color: var(--btn-bg);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--btn-bg-hover);
+  --bs-btn-active-border-color: var(--btn-bg-hover);
+}
+
+/* Nel tema scuro il marrone sullo sfondo scuro si legge poco: testo e bordo chiari */
+[data-bs-theme="dark"] .btn-filtro {
+  --bs-btn-color: var(--footer-link-hover);
+  --bs-btn-border-color: var(--footer-link-hover);
+}
+
+/* Foto nelle card lavori: stessa altezza per tutte, ritagliata senza deformarla */
 .immagine-lavoro {
   height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--bg-hero);
-  font-size: 3rem;
-  border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
+  object-fit: cover;
 }
 
 /* BOTTONE */
