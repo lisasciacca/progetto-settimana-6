@@ -11,7 +11,7 @@
 
 <body>
 
-           <header class="sticky-top">
+    <header class="sticky-top">
         <!-- Navbar Bootstrap (navbar-expand-md). Sticky in cima: sticky-top sta sull'header, che è il figlio diretto del body -->
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="container">
@@ -20,7 +20,8 @@
                 <!-- Tema + hamburger sempre a destra: su mobile accanto all'hamburger, da md in su dopo i link (order-md-last) -->
                 <div class="d-flex align-items-center order-md-last">
                     <!-- Pulsante tema chiaro / scuro -->
-                    <button id="btn-tema" class="btn btn-tema nav-link me-2 me-md-0 ms-md-2" type="button" aria-label="Cambia tema">
+                    <button id="btn-tema" class="btn btn-tema nav-link me-2 me-md-0 ms-md-2" type="button"
+                        aria-label="Cambia tema">
                         <span id="icona-tema">🌙</span>
                     </button>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
@@ -39,99 +40,102 @@
             </div>
         </nav>
     </header>
-
-    <section id="studio" class="hero d-flex align-items-center text-center text-white">
-        <!-- Hero: titolo grande, sottotitolo, CTA. Sfondo brand. min-height 80vh -->
-        <div class="container">
-            <h1 class="display-3 fw-bold">Architettura per spazi che parlano</h1>
-            <p class="lead">
-                Progettiamo case, uffici e spazi commerciali con attenzione alla luce,
-                ai materiali e al contesto.
-            </p>
-            <a href="#contatti" class="hero-cta">Inizia un progetto</a>
-        </div>
-    </section>
-
-    <section id="servizi" class="py-5">
-        <!-- 3 card servizi affiancate da md in su -->
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold">I nostri servizi</h2>
-                <p class="text-body-secondary">Tre aree di lavoro, una sola attenzione alla qualità.</p>
+    <main>
+        <section id="studio" class="hero d-flex align-items-center text-center text-white">
+            <!-- Hero: titolo grande, sottotitolo, CTA. Sfondo brand. min-height 80vh -->
+            <div class="container">
+                <h1 class="display-3 fw-bold">Architettura per spazi che parlano</h1>
+                <p class="lead">
+                    Progettiamo case, uffici e spazi commerciali con attenzione alla luce,
+                    ai materiali e al contesto.
+                </p>
+                <a href="#contatti" class="hero-cta">Inizia un progetto</a>
             </div>
-            <div class="row g-4">
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 border-0 text-center">
-                        <div class="card-body p-4">
-                            <div class="fs-1 mb-3">🏠</div>
-                            <h3 class="card-title h5 fw-bold">Progettazione residenziale</h3>
-                            <p class="card-text text-body-secondary">
-                                Case private, ville e ristrutturazioni domestiche, dal sopralluogo
-                                alla consegna delle chiavi.
-                            </p>
+        </section>
+
+        <section id="servizi" class="py-5">
+            <!-- 3 card servizi affiancate da md in su -->
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold">I nostri servizi</h2>
+                    <p class="text-body-secondary">Tre aree di lavoro, una sola attenzione alla qualità.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 border-0 text-center">
+                            <div class="card-body p-4">
+                                <div class="fs-1 mb-3">🏠</div>
+                                <h3 class="card-title h5 fw-bold">Progettazione residenziale</h3>
+                                <p class="card-text text-body-secondary">
+                                    Case private, ville e ristrutturazioni domestiche, dal sopralluogo
+                                    alla consegna delle chiavi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 border-0 text-center">
+                            <div class="card-body p-4">
+                                <div class="fs-1 mb-3">🪑</div>
+                                <h3 class="card-title h5 fw-bold">Interior design</h3>
+                                <p class="card-text text-body-secondary">
+                                    Allestimenti d'interno per case e uffici, con materiali selezionati
+                                    e arredo su misura.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 border-0 text-center">
+                            <div class="card-body p-4">
+                                <div class="fs-1 mb-3">🧱</div>
+                                <h3 class="card-title h5 fw-bold">Ristrutturazioni</h3>
+                                <p class="card-text text-body-secondary">
+                                    Riqualificazione di spazi esistenti, gestione dei lavori e
+                                    coordinamento con le imprese.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 border-0 text-center">
-                        <div class="card-body p-4">
-                            <div class="fs-1 mb-3">🪑</div>
-                            <h3 class="card-title h5 fw-bold">Interior design</h3>
-                            <p class="card-text text-body-secondary">
-                                Allestimenti d'interno per case e uffici, con materiali selezionati
-                                e arredo su misura.
-                            </p>
-                        </div>
-                    </div>
+            </div>
+        </section>
+
+        <section id="lavori" class="py-5">
+            <!-- Sezione lavori: 6 card generate da JS. Mobile 1 per riga, md 2 per riga, lg 3 per riga -->
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold">Alcuni lavori</h2>
+                    <p class="text-body-secondary">Una selezione dei progetti realizzati negli ultimi anni.</p>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 border-0 text-center">
-                        <div class="card-body p-4">
-                            <div class="fs-1 mb-3">🧱</div>
-                            <h3 class="card-title h5 fw-bold">Ristrutturazioni</h3>
-                            <p class="card-text text-body-secondary">
-                                Riqualificazione di spazi esistenti, gestione dei lavori e
-                                coordinamento con le imprese.
-                            </p>
-                        </div>
-                    </div>
+
+                <!-- Filtri categoria: data-categoria dice a JS quali card mostrare -->
+                <div id="filtri-lavori" class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                    <button type="button" class="btn btn-filtro active" data-categoria="tutti">Tutti</button>
+                    <button type="button" class="btn btn-filtro" data-categoria="Residenziale">Residenziale</button>
+                    <button type="button" class="btn btn-filtro" data-categoria="Interior design">Interior
+                        design</button>
+                    <button type="button" class="btn btn-filtro"
+                        data-categoria="Ristrutturazione">Ristrutturazione</button>
                 </div>
+
+                <!-- Griglia vuota: le card vengono inserite da script.js -->
+                <div id="griglia-lavori" class="row g-4"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="lavori" class="py-5">
-        <!-- Sezione lavori: 6 card generate da JS. Mobile 1 per riga, md 2 per riga, lg 3 per riga -->
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold">Alcuni lavori</h2>
-                <p class="text-body-secondary">Una selezione dei progetti realizzati negli ultimi anni.</p>
+        <section id="contatti" class="py-5 bg-body-tertiary">
+            <!-- Contatti: il form si apre in una modale cliccando "Contattaci" -->
+            <div class="container text-center">
+                <h2 class="fw-bold">Contattaci</h2>
+                <p class="text-body-secondary">Compila il form, ti rispondiamo entro 48 ore.</p>
+                <button type="button" class="btn btn-brand px-4" data-bs-toggle="modal" data-bs-target="#modale-form">
+                    Contattaci
+                </button>
             </div>
-
-            <!-- Filtri categoria: data-categoria dice a JS quali card mostrare -->
-            <div id="filtri-lavori" class="d-flex flex-wrap justify-content-center gap-2 mb-4">
-                <button type="button" class="btn btn-filtro active" data-categoria="tutti">Tutti</button>
-                <button type="button" class="btn btn-filtro" data-categoria="Residenziale">Residenziale</button>
-                <button type="button" class="btn btn-filtro" data-categoria="Interior design">Interior design</button>
-                <button type="button" class="btn btn-filtro" data-categoria="Ristrutturazione">Ristrutturazione</button>
-            </div>
-
-            <!-- Griglia vuota: le card vengono inserite da script.js -->
-            <div id="griglia-lavori" class="row g-4"></div>
-        </div>
-    </section>
-
-    <section id="contatti" class="py-5 bg-body-tertiary">
-        <!-- Contatti: il form si apre in una modale cliccando "Contattaci" -->
-        <div class="container text-center">
-            <h2 class="fw-bold">Contattaci</h2>
-            <p class="text-body-secondary">Compila il form, ti rispondiamo entro 48 ore.</p>
-            <button type="button" class="btn btn-brand px-4" data-bs-toggle="modal" data-bs-target="#modale-form">
-                Contattaci
-            </button>
-        </div>
-    </section>
-
+        </section>
+    </main>
+    
     <!-- Modale con il form contatti -->
     <div class="modal fade" id="modale-form" tabindex="-1" aria-labelledby="titolo-modale-form" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
