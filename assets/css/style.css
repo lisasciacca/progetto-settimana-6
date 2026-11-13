@@ -41,11 +41,6 @@ section {
   box-shadow: var(--shadow-card-hover);
 }
 
-/* FORM: larghezza limitata e centrata */
-.form-contatti {
-  max-width: 480px;
-}
-
 /* BOTTONE */
 .btn-brand {
   background-color: var(--btn-bg);
